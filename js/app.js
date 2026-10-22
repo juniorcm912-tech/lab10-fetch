@@ -1,12 +1,12 @@
 console.log("Laboratorio 10 listo");
 
-// ===== Ejercicio 3: fetch con .then() =====
+//  Ejercicio 3
 fetch("https://jsonplaceholder.typicode.com/users/1")
   .then((res) => res.json())
   .then((usuario) => console.log("Usuario 1:", usuario.name))
   .catch((error) => console.log("Ocurrió un error:", error));
 
-// ===== Ejercicio 4: async/await =====
+//Ejercicio 4
 async function cargarUsuario() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users/2");
   const usuario = await res.json();
@@ -15,7 +15,7 @@ async function cargarUsuario() {
 
 cargarUsuario();
 
-// ===== Ejercicio 5: try/catch =====
+// Ejercicio 5
 async function probarError() {
   try {
     const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -29,7 +29,7 @@ async function probarError() {
 
 probarError();
 
-// ===== Ejercicio 6: mostrar en la página =====
+// Ejercicio 6
 async function mostrarUsuarios() {
   const lista = document.querySelector("#lista");
   try {
